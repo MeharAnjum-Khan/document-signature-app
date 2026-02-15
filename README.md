@@ -93,5 +93,3 @@ document-signature-app/
 # 🧾 License
 
 MIT
-
----
