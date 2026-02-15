@@ -1,43 +1,37 @@
 # document-signature-backend
 
-Express backend API for the Document Signature application.
+Backend API for the Document Signature application.
 
-## Setup
+Prerequisites
 
-1. Install dependencies
+- Node.js 18+
+- MongoDB
+
+Quick Start
 
 ```bash
 cd document-signature-backend
 npm install
+cp .env.example .env
+npm run dev
 ```
 
-2. Create a `.env` file (or copy `.env.example`) and set environment variables:
+Available scripts
 
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/document-signature
-JWT_SECRET=your-secret-key
-JWT_REFRESH_SECRET=your-refresh-secret
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-CLIENT_URL=http://localhost:5173
-```
+- `npm run dev` — development (nodemon)
+- `npm start` — production start
 
-3. Run in development
+Environment
 
-```bash
-npm run dev   # uses nodemon
-```
+Copy `.env.example` to `.env` and set the following as needed:
 
-4. Production
+- `PORT`
+- `MONGODB_URI`
+- `JWT_SECRET`, `JWT_REFRESH_SECRET`
+- Email config: `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USER`, `EMAIL_PASS`
 
-```bash
-npm start
-```
+Notes
 
-## Notes
+- File uploads are stored under `uploads/` (dev). API routes are mounted under `/api`.
 
-- The API exposes document, signature, auth, audit and sharing endpoints under `/api`.
-- File uploads are stored in `uploads/` by default.
+License: MIT

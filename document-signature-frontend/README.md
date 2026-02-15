@@ -1,30 +1,27 @@
 # document-signature-frontend
 
-Vite + React frontend for the Document Signature application.
+Frontend web application (Vite + React + TypeScript).
 
-## Setup
+Prerequisites
 
-1. Install dependencies
+- Node.js 18+
+
+Quick Start
 
 ```bash
 cd document-signature-frontend
 npm install
-```
-
-2. Run development server
-
-```bash
 npm run dev
 ```
 
-3. Build for production
+Available scripts
 
-```bash
-npm run build
-npm run preview
-```
+- `npm run dev` — start Vite dev server
+- `npm run build` — build for production
+- `npm run preview` — preview production build
 
-## Notes
+Notes
 
-- The frontend uses Vite, React, TypeScript and Tailwind CSS.
-- API client is under `src/api` and expects the backend API to be running.
+- API client is in `src/api` — ensure backend API is running and `BASE_URL` is configured if needed.
+
+License: MIT
