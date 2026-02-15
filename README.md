@@ -1,36 +1,122 @@
-# Document Signature (monorepo)
+# Document Signature App
 
-Concise monorepo for the Document Signature application — a full-stack project consisting of a backend API and a frontend web app.
+Lightweight monorepo for the Document Signature application. This repository contains the backend API and the frontend web application.
 
-## Contents
+Sections
 
-- `document-signature-backend/` — Node.js + Express API
-- `document-signature-frontend/` — Vite + React frontend
+- Bug Tracker
+- Features
+	- Core Features
+	- Advanced Features
+- Tech Stack
+	- Frontend
+	- Backend
+- Getting Started
+	- Prerequisites
+	- Installation
+	- Running the Project
+- Project Structure
+- Security
+- License
 
-## Quick start
+---
 
-1. Start the backend API
+Bug Tracker
+
+Use the repository Issues (or your preferred issue tracker) to report bugs and request features. Include steps to reproduce, expected vs actual behavior, and environment details.
+
+Features
+
+Core Features
+
+- User authentication (JWT)
+- Upload and manage PDF documents
+- In-browser PDF preview
+- Place and record signatures on documents
+- Share signing links with external signers
+- Audit trail of signature events
+
+Advanced Features
+
+- Embed signatures into PDFs
+- Email notifications for signing requests
+- Tokenized, time-limited signing links
+
+Tech Stack
+
+Frontend
+
+- React + Vite
+- TypeScript
+- Tailwind CSS
+
+Backend
+
+- Node.js + Express
+- MongoDB (Mongoose)
+- PDF processing with PDF-Lib
+
+Getting Started
+
+Prerequisites
+
+- Node.js (18+)
+- npm
+- MongoDB (local or Atlas)
+
+Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/MeharAnjum-Khan/document-signature-app.git
+cd document-signature-app
+```
+
+2. Install dependencies for each workspace
 
 ```bash
 cd document-signature-backend
 npm install
-cp .env.example .env    # configure env values
+
+cd ../document-signature-frontend
+npm install
+```
+
+Running the Project
+
+1. Start the backend (dev)
+
+```bash
+cd document-signature-backend
+cp .env.example .env
 npm run dev
 ```
 
-2. Start the frontend
+2. Start the frontend (dev)
 
 ```bash
 cd document-signature-frontend
-npm install
 npm run dev
 ```
 
-Notes
+Project Structure
 
-- Backend configuration is stored in `document-signature-backend/.env`.
-- Frontend expects the API base URL in `document-signature-frontend/src/api`.
+```
+document-signature-app/
+├── document-signature-backend/    # Express API (src/, uploads/)
+├── document-signature-frontend/   # Vite + React app (src/)
+├── README.md
+└── .gitignore
+```
+
+Security
+
+- Do not commit secrets (use `.env` and `.env.example`).
+- Rotate credentials and JWT secrets if leaked.
+- Keep dependencies up to date and run vulnerability scans.
 
 License
 
 MIT
+
