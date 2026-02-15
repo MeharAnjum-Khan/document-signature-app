@@ -5,7 +5,7 @@ The Document Signature App is a secure, full-stack web application that enables 
 
 # 🚀 Features
 
-Core Features
+## Core Features
 
 - JWT-based user authentication (access + refresh)
 - Upload and manage PDF documents
@@ -14,7 +14,7 @@ Core Features
 - Share tokenized signing links for external signers
 - Audit trail for signature events
 
-Advanced Features
+## Advanced Features
 
 - Embed signatures into PDFs using `pdf-lib`
 - Email notifications for signing requests (Nodemailer)
@@ -35,13 +35,13 @@ Backend
 
 # ✅ Getting Started
 
-Prerequisites
+## Prerequisites
 
 - Node.js 18+
 - npm
 - MongoDB (local or Atlas)
 
-Installation
+## Installation
 
 Clone the repository and install dependencies for each workspace:
 
@@ -56,7 +56,7 @@ cd ../document-signature-frontend
 npm install
 ```
 
-Running the Project (development)
+## Running the Project (development)
 
 1. Start backend
 
@@ -90,6 +90,5 @@ document-signature-app/
 - Rotate JWT and email credentials if compromised.
 - Keep dependencies up to date and run security scans.
 
-# 🧾 License
-
-MIT
+## 📝 License
+This project is licensed under the MIT License.
