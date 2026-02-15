@@ -1,14 +1,7 @@
 # Document Signature App
 
-Bug Tracker (Jira-like Issue Tracker)
+The Document Signature App is a secure, full-stack web application that enables users to upload documents, place digital signatures, share signing links, and generate legally traceable signed PDFs — similar to platforms like DocuSign and Adobe Sign.
 
-Use the repository Issues (or your preferred issue tracker) to log bugs, feature requests and tasks. When opening an issue include:
-
-- Title and concise summary
-- Steps to reproduce (for bugs)
-- Expected vs actual behavior
-- Environment (OS, Node version, browser)
-- Screenshots / logs when available
 
 🚀 Features
 
