@@ -45,7 +45,7 @@ npm run preview
 - Signing UI: place, type or draw signatures on documents and submit via signing links
 - Rejection flow with reason input
 
-# Notes
+## Notes
 
 - API client lives in `src/api` — ensure backend API is running and `BASE_URL` is configured.
 - Static assets are in `public/`; app config in `vite.config.ts` and `tsconfig.json`.
