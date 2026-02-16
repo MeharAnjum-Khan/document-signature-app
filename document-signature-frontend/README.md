@@ -1,54 +1,61 @@
-# Bug Tracker - Frontend
+# Document Signature App - Frontend
 
-## 🛠 Tech Stack
+The frontend for the Document Signature App is a modern, responsive React application built with TypeScript and Vite. It provides an intuitive interface for users to upload documents, preview PDFs, and place digital signatures.
 
-- React 18 + Vite
-- TypeScript
-- Tailwind CSS
-- react-router-dom, react-pdf, react-hot-toast
+# 🚀 Features
 
-## ⚙️ Setup Instructions
+- **Document Management**: User-friendly interface for uploading and managing PDFs.
+- **PDF Interaction**: High-performance PDF rendering using `react-pdf`.
+- **Signature Placement**: Drag-and-drop or click-to-place signature functionality.
+- **Dynamic UI**: Responsive design built with Tailwind CSS.
+- **Form Validation**: Robust client-side validation using `zod` and `react-hook-form`.
+- **Notifications**: Real-time feedback via `react-hot-toast`.
 
-### Prerequisites
+# 🛠 Tech Stack
 
-- Node.js 18+ and npm
+- **Framework**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS
+- **PDF Core**: `react-pdf`
+- **Essentials**: Lucide React, Axios, @dnd-kit
 
-### Installation
+# ✅ Getting Started
+
+## Prerequisites
+
+- Node.js 18+
+- npm
+
+## Installation
+
+From the root of the project:
 
 ```bash
-git clone https://github.com/MeharAnjum-Khan/document-signature-app.git
-cd document-signature-app/document-signature-frontend
+cd document-signature-frontend
 npm install
 ```
 
-### Running (development)
+## Running the Project (development)
 
 ```bash
 npm run dev
 ```
 
-### Build (production)
+# 📂 Project Structure
 
-```bash
-npm run build
-npm run preview
+```
+document-signature-frontend/
+├── src/                # React components, hooks, and logic
+├── public/             # Static assets
+├── index.html          # Entry point
+├── tailwind.config.js  # Styling configuration
+└── vite.config.ts      # Build configuration
 ```
 
-# 🚀 Features
+# 🔒 Security
 
-## Core Frontend Features
-
-- User authentication flows (login / register) with JWT persisted in `localStorage`
-- Responsive Dashboard to list, search and filter documents
-- PDF preview using `react-pdf` with page navigation
-- Inline preview and direct delete action for documents
-- Signing UI: place, type or draw signatures on documents and submit via signing links
-- Rejection flow with reason input
-
-## Notes
-
-- API client lives in `src/api` — ensure backend API is running and `BASE_URL` is configured.
-- Static assets are in `public/`; app config in `vite.config.ts` and `tsconfig.json`.
+- Use `.env` for frontend environment variables.
+- Ensure all sensitive API calls are handled via the backend.
+- Sanitize user inputs to prevent XSS.
 
 ## 📝 License
 This project is licensed under the MIT License.

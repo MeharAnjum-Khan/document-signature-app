@@ -1,37 +1,62 @@
-# document-signature-backend
+# Document Signature App - Backend
 
-Backend API for the Document Signature application.
+The backend for the Document Signature App is a robust Node.js API built with Express and MongoDB. It handles authentication, secure document storage, PDF manipulation, and email notifications.
 
-Prerequisites
+# 🚀 Features
+
+- **Authentication**: Secure JWT-based authentication with access and refresh tokens.
+- **Document Processing**: Advanced PDF manipulation (embedding signatures) using `pdf-lib`.
+- **File Uploads**: Managed via `multer` with validation.
+- **Data Persistence**: MongoDB with `mongoose` for structured data management.
+- **Email Services**: Signing requests and notifications powered by `nodemailer`.
+- **Security**: Password hashing with `bcryptjs` and unique identifier generation with `uuid`.
+
+# 🛠 Tech Stack
+
+- **Runtime**: Node.js, Express
+- **Database**: MongoDB with Mongoose
+- **PDF Engine**: `pdf-lib`
+- **Essentials**: JWT, Multer, Nodemailer
+
+# ✅ Getting Started
+
+## Prerequisites
 
 - Node.js 18+
-- MongoDB
+- MongoDB (local or Atlas)
 
-Quick Start
+## Installation
+
+From the root of the project:
 
 ```bash
 cd document-signature-backend
 npm install
+```
+
+## Running the Project (development)
+
+```bash
 cp .env.example .env
 npm run dev
 ```
 
-Available scripts
+# 📂 Project Structure
 
-- `npm run dev` — development (nodemon)
-- `npm start` — production start
+```
+document-signature-backend/
+├── src/                # Express API and business logic
+├── uploads/            # Temporary storage for document processing
+├── .env.example        # Template for environment variables
+└── package.json        # Dependencies and scripts
+```
 
-Environment
+# 🔒 Security
 
-Copy `.env.example` to `.env` and set the following as needed:
+- Do not commit secrets. Use `.env` and keep an example file (`.env.example`).
+- Validate and sanitize all file uploads.
+- Rotate JWT and email credentials if compromised.
+- Keep dependencies up to date and run security scans.
 
-- `PORT`
-- `MONGODB_URI`
-- `JWT_SECRET`, `JWT_REFRESH_SECRET`
-- Email config: `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_USER`, `EMAIL_PASS`
-
-Notes
-
-- File uploads are stored under `uploads/` (dev). API routes are mounted under `/api`.
-
-License: MIT
+## 📝 License
+This project is licensed under the MIT License.
