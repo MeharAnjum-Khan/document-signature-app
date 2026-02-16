@@ -50,4 +50,5 @@ npm run preview
 - API client lives in `src/api` — ensure backend API is running and `BASE_URL` is configured.
 - Static assets are in `public/`; app config in `vite.config.ts` and `tsconfig.json`.
 
-# License: MIT
+## 📝 License
+This project is licensed under the MIT License.
