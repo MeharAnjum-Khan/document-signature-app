@@ -1,0 +1,19 @@
+# Backend .gitignore
+node_modules/
+.env
+.env.local
+.env.production
+.env.development
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,16 @@
+{
+    "name": "document-signature-app",
+    "version": "1.0.0",
+    "description": "Monorepo for Document Signature App",
+    "private": true,
+    "workspaces": [
+        "document-signature-frontend",
+        "document-signature-backend"
+    ],
+    "scripts": {
+        "install:all": "npm install",
+        "dev:frontend": "npm run dev --workspace=document-signature-frontend",
+        "dev:backend": "npm run dev --workspace=document-signature-backend",
+        "start:all": "npm run dev:backend & npm run dev:frontend"
+    }
+}

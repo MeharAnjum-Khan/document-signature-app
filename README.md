@@ -80,7 +80,44 @@ document-signature-app/
 ├── document-signature-backend/    # Express API (src/, uploads/)
 ├── document-signature-frontend/   # Vite + React app (src/)
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── package.json                   # Root workspace configuration
+```
+
+# 🚀 Manual Commit Steps
+
+To commit changes manually to the respective folders, follow these steps:
+
+### 1. Stage Changes
+Stage either the specific folder or individual files you've modified:
+
+```bash
+# Stage everything in the frontend
+git add document-signature-frontend/
+
+# OR stage everything in the backend
+git add document-signature-backend/
+
+# OR stage everything in the entire monorepo
+git add .
+```
+
+### 2. Commit with a Descriptive Message
+Use a prefix to clearly indicate which part of the app you're updating:
+
+```bash
+# Example for Frontend
+git commit -m "feat(frontend): add signature placement logic"
+
+# Example for Backend
+git commit -m "fix(backend): resolve JWT expiration bug"
+```
+
+### 3. Push to GitHub
+Sync your local commits with the remote repository:
+
+```bash
+git push origin main
 ```
 
 # 🔒 Security

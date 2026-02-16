@@ -1,0 +1,29 @@
+# Dependencies
+# Ignore the node_modules folder where all dependencies are installed
+node_modules/
+
+# Production Build Artifacts
+# Ignore the output of the build process (dist or build folders)
+dist/
+build/
+
+# Environment Variables and Secrets
+# Never commit your environment files as they may contain sensitive API keys or secrets
+.env
+.env.local
+.env.production
+.env.development
+
+# IDE and Editor Specific Files
+# Ignore configuration folders for VS Code and IntelliJ IDEA
+.vscode/
+.idea/
+
+# System-Specific Files
+# Ignore OS-generated files that are not relevant to the project
+.DS_Store
+Thumbs.db
+
+# Logs
+# Ignore log files generated during development or runtime
+*.log

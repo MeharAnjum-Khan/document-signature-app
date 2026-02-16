@@ -43,8 +43,8 @@ exports.register = async (req, res) => {
       refreshToken,
     });
   } catch (error) {
-    console.error('Register error:', error);
-    res.status(500).json({ message: 'Server error during registration.' });
+    console.error('Register error:', error.message, error.stack); // Added detailed error logging
+    res.status(500).json({ message: 'Server error during registration.', error: error.message }); // Return error message in response
   }
 };
 

@@ -12,11 +12,6 @@ const registerSchema = z
     name: z.string().min(2, 'Name must be at least 2 characters'),
     email: z.string().email('Enter a valid email'),
     password: z.string().min(6, 'Password must be at least 6 characters'),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: 'Passwords do not match',
-    path: ['confirmPassword'],
   });
 
 type RegisterForm = z.infer<typeof registerSchema>;
@@ -50,7 +45,7 @@ export default function Register() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-surface-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-md h-[600px] mt-10"> {/* Added margin-top to move content down */}
         {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2.5">
@@ -111,19 +106,6 @@ export default function Register() {
               </div>
               {errors.password && (
                 <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-surface-700 mb-1.5">Confirm Password</label>
-              <input
-                type="password"
-                {...register('confirmPassword')}
-                className="input-field"
-                placeholder="Repeat your password"
-              />
-              {errors.confirmPassword && (
-                <p className="text-red-500 text-xs mt-1">{errors.confirmPassword.message}</p>
               )}
             </div>
 

@@ -1,13 +1,30 @@
+# Dependencies
+# Ignore node_modules in the root and across all workspace packages
 node_modules/
+
+# Production Build Artifacts
+# Ignore build and distribution folders from any subprojects
 dist/
 build/
+
+# Environment Variables and Secrets
+# Ignore .env files to prevent sensitive data from being committed
 .env
 .env.local
 .env.production
+
+# Backend-specific Uploads
+# Ignore uploaded files but keep the directory (via .gitkeep)
 uploads/*
 !uploads/.gitkeep
+
+# Logs and System Files
+# Ignore log files and OS-generated files
 *.log
 .DS_Store
 Thumbs.db
+
+# IDE and Editor Specific Files
+# Ignore configuration folders for VS Code and other IDEs
 .vscode/
 coverage/
